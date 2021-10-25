@@ -1,0 +1,33 @@
+#app-dashboard-page {
+  #app-dashboard-pageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > div {
+      margin-left: auto;
+      margin-right: 0;
+      .btn {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .app-dashboard-card {
+    background: #F1F5F6;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 15px 20px;
+  }
+
+  .app-dashboard-link {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  #app-dashboard-pageCards {
+    margin-top: 40px;
+  }
+}

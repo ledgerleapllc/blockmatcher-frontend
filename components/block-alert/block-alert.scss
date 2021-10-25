@@ -1,0 +1,29 @@
+.c-block-alert {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  
+  &.success {
+    background-color: #DCF4E7;
+
+    #c-block-alert__icon {
+      svg {
+        color: #42C27D;
+      }
+    }
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  #c-block-alert__closeIcon {
+    text-align: right;
+    cursor: pointer;
+  }
+}

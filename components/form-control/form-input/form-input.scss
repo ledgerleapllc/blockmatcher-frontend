@@ -1,0 +1,30 @@
+.custom-form-control {
+  display: block;
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  border: 1px solid #CFD8DC;
+  border-radius: 4px;
+  padding: 0 5px;
+
+  &.custom-form-control-checkbox {
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+    
+    input {
+      margin-right: 14px;
+      margin-top: 3px;
+    }
+  }
+}
+.custom-form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(0, 0, 0, 0.35);
+}
+.custom-form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.35);
+}
+.custom-form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(0, 0, 0, 0.35);
+}
