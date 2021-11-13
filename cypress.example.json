@@ -1,0 +1,8 @@
+{
+	"baseUrl": "http://blockmatcher.localhost",
+	"env": {
+		"DEV_EMAIL": "dev@example.com",
+		"ADMIN_LOGIN_EMAIL": "",
+		"ADMIN_LOGIN_PASSWORD": ""
+	}
+}
