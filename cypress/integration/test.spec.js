@@ -58,7 +58,73 @@ describe('Full test of critical functionality', () => {
 		cy.contains('Sign In')
 	})
 
-	it('should login', () => {
+
+	// buyer setup
+	it('should navigate to the registration screen', () => {
+		////
+		cy.contains('Register')
+	})
+
+	it('should register as buyer', () => {
+		////
+	})
+
+	it('should login as buyer', () => {
+		cy.get('input:first').clear().type(Cypress.env('BUYER_LOGIN_EMAIL'))
+		cy.get('input:last').clear()
+			.type(Cypress.env('BUYER_LOGIN_PASSWORD'))
+			.type('{enter}')
+	})
+
+	it('should load dashboard', () => {
+		cy.location('pathname').should('eq', '/app')
+		cy.contains('')
+		cy.wait(2000)
+	})
+
+	it('should place an order for 100 tokens', () => {
+		////
+	})
+
+	it('should logout as buyer', () => {
+		////
+	})
+
+
+	// seller setup
+	it('should navigate to the registration screen', () => {
+		////
+		cy.contains('Register')
+	})
+
+	it('should register as seller', () => {
+		////
+	})
+
+	it('should login as seller', () => {
+		cy.get('input:first').clear().type(Cypress.env('SELLER_LOGIN_EMAIL'))
+		cy.get('input:last').clear()
+			.type(Cypress.env('SELLER_LOGIN_PASSWORD'))
+			.type('{enter}')
+	})
+
+	it('should load dashboard', () => {
+		cy.location('pathname').should('eq', '/app')
+		cy.contains('')
+		cy.wait(2000)
+	})
+
+	it('should post 100 tokens up for OTC sale', () => {
+		////
+	})
+
+	it('should logout as seller', () => {
+		////
+	})
+
+
+	// admin overview
+	it('should login as admin', () => {
 		cy.get('input:first').clear().type(Cypress.env('ADMIN_LOGIN_EMAIL'))
 		cy.get('input:last').clear()
 			.type(Cypress.env('ADMIN_LOGIN_PASSWORD'))
@@ -67,7 +133,7 @@ describe('Full test of critical functionality', () => {
 
 	it('should load dashboard', () => {
 		cy.location('pathname').should('eq', '/app')
-		cy.contains('Casper Token Total Balance')
+		cy.contains('')
 		cy.wait(2000)
 	})
 

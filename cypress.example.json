@@ -3,6 +3,10 @@
 	"env": {
 		"DEV_EMAIL": "dev@example.com",
 		"ADMIN_LOGIN_EMAIL": "",
-		"ADMIN_LOGIN_PASSWORD": ""
+		"ADMIN_LOGIN_PASSWORD": "",
+		"BUYER_LOGIN_EMAIL": "",
+		"BUYER_LOGIN_PASSWORD": "",
+		"SELLER_LOGIN_EMAIL": "",
+		"SELLER_LOGIN_PASSWORD": ""
 	}
 }
