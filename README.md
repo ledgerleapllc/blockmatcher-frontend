@@ -12,7 +12,9 @@ This is the frontend repo of the portal. To see the backend repo, visit https://
 ### Prerequisites
 
 Relies on NextJS/Vercel, and NodeJS version 14+
+
 You can find documentation on NextJS here https://github.com/vercel/next.js/
+
 You can find documentation on NodeJS here https://github.com/nodejs/help
 
 ### Install and Deploy
