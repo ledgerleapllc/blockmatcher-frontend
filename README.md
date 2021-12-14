@@ -41,7 +41,6 @@ You will need to add the following code to your server configuration under the V
 
 ```
 RewriteEngine On
-RewriteBase /
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
