@@ -33,6 +33,32 @@ export function register(params, start, completion) {
   };
 }
 
+// Send Reset Email - Common
+export function sendResetEmail(email, start, completion) {
+  return function (dispatch) {
+    if (start) start();
+    API.sendResetEmail(email).then((res) => {
+      if (!res.success) dispatch(showAlert(res.message));
+      if (completion) completion(res);
+    });
+  };
+}
+
+// Reset Password - Common
+export function resetPassword(params, start, completion) {
+  return function (dispatch) {
+    if (start) start();
+    API.resetPassword(params).then((res) => {
+      if (res.success)
+        dispatch(
+          showAlert("You've successfully reset your password.", "success")
+        );
+      else dispatch(showAlert(res.message));
+      if (completion) completion(res);
+    });
+  };
+}
+
 // Get Me
 export function getMe(start, completion, returnOnly = false) {
   return function (dispatch) {

@@ -214,6 +214,15 @@ class API {
     return sendRequest("/me", {}, "GET", true);
   }
 
+  // Send Reset Email - Common
+  static sendResetEmail(email) {
+    return sendRequest("/send-reset-email", { email }, "POST");
+  }
+
+  static resetPassword(params) {
+    return sendRequest("/reset-password", params, "POST");
+  }
+
   static exportCSV() {
     return sendRequest("/admin/export", {}, "GET", true);
   }

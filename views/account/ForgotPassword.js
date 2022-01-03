@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { FormInputComponent } from "../../components";
-import { login } from "../../utils/Thunk";
+import { showAlert, showCanvas, hideCanvas } from "../../redux/actions";
+import { login, sendResetEmail } from "../../utils/Thunk";
+import Helper from "../../utils/Helper";
 
 const ForgotPassword = () => {
 
@@ -11,17 +13,28 @@ const ForgotPassword = () => {
 
   const submit = (e) => {
     e.preventDefault();
-    if (!email || !password) return;
+    if (!email) return;
+
+    if (!Helper.validateEmail(email)) {
+      dispatch(showAlert("Input valid email address"));
+      return;
+    }
 
     dispatch(
-      login(
+      sendResetEmail(
         email,
-        password,
         () => {
-          // this.props.dispatch(showCanvas());
+          dispatch(showCanvas());
         },
-        () => {
-          // this.props.dispatch(hideCanvas());
+        (res) => {
+          dispatch(hideCanvas());
+          console.log(res);
+          if (res && res.success) {
+            setEmail("");
+            dispatch(
+              showAlert("Please check your inbox", "success")
+            );
+          }
         }
       )
     );

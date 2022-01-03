@@ -6,6 +6,10 @@ const LoginView = lazy(() => import("../views/account/Login"));
 const RegisterView = lazy(() => import("../views/account/Register"));
 const ForgotPasswordView = lazy(() => import("../views/account/ForgotPassword"));
 
+const ResetPasswordView = lazy(() =>
+  import("../views/account/ResetPassword")
+);
+
 export default function LandingRoutes({ auth }) {
 
   if (auth && auth.id) return <Redirect to="/app" />
@@ -26,6 +30,9 @@ export default function LandingRoutes({ auth }) {
         </PublicRoute>
         <PublicRoute auth={auth} exact path="/forgot-password">
           <ForgotPasswordView />
+        </PublicRoute>
+        <PublicRoute auth={auth} exact path="/password/reset/:token">
+          <ResetPasswordView />
         </PublicRoute>
         <Route>
           <h2 className="text-center mt-4 mb-3">Not Found</h2>
