@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./app-footer.scss";
-
 export default function AppFooter() {
   return (
     <div id="app-footer">

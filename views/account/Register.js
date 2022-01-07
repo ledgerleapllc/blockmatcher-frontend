@@ -6,8 +6,6 @@ import { showAlert, showCanvas, hideCanvas } from "../../redux/actions";
 import Helper from "../../utils/Helper";
 import { register } from "../../utils/Thunk";
 
-// import "./register.scss";
-
 const Register = () => {
 
   const dispatch = useDispatch();

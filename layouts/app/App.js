@@ -5,8 +5,6 @@ import { AppRoutes } from "../../routes";
 import AppHeaderLayout from "../app-header/AppHeader";
 import AppFooterLayout from "../app-footer/AppFooter";
 
-import "./app.scss";
-
 const mapStateToProps = (state) => {
   return {
     activeModal: state.global.activeModal,

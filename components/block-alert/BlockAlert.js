@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import * as Icon from "react-feather";
 import { setBlockAlertData } from "../../redux/actions";
 
-import "./block-alert.scss";
-
 const mapStateToProps = () => {
   return {};
 };

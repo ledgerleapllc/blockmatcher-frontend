@@ -4,7 +4,6 @@ import { Redirect } from 'react-router';
 import AdminDashboard from './admin';
 import SellerDashboard from './seller';
 import BuyerDashboard from './buyer';
-import './dashboard.scss';
 
 const Dashboard = () => {
 

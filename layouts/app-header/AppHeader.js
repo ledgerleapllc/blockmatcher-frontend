@@ -5,8 +5,6 @@ import * as Icon from "react-feather";
 import Helper from "../../utils/Helper";
 import { saveUser, showMenu, hideMenu } from "../../redux/actions";
 
-import "./app-header.scss";
-
 const mapStateToProps = (state) => {
   return {
     authUser: state.global.authUser,

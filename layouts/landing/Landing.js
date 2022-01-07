@@ -4,8 +4,6 @@ import { Switch } from "react-router-dom";
 import { LandingRoutes } from "../../routes";
 import FooterLayout from "../footer/Footer";
 
-import "./landing.scss";
-
 const mapStateToProps = (state) => {
   return {
     activeModal: state.global.activeModal,

@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { BlockAlertComponent } from "../../../components";
 
-import "./settings.scss";
-
 const mapStateToProps = (state) => {
   return {
     blockAlertData: state.global.blockAlertData,
