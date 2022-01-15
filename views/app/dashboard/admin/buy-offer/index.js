@@ -146,7 +146,7 @@ const BuyOffers = () => {
             cell: (row) => {
                 return (
                     <label className="font-size-12">
-                        {row.type ? 'Fixed Price' : 'Discount'}
+                        {row.type ? 'Discount' : 'Fixed Price'}
                     </label>
                 );
             },
